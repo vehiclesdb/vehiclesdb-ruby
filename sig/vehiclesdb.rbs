@@ -1,0 +1,41 @@
+# Type signatures for the public API. (Best-effort; the README and code are the
+# source of truth.)
+
+module VehiclesDB
+  VERSION: String
+
+  def self.configuration: () -> Configuration
+  def self.configure: () { (Configuration) -> void } -> void
+  def self.reset_configuration!: () -> void
+  def self.client: () -> Client
+
+  class Error < StandardError
+  end
+
+  class ConfigurationError < Error
+  end
+
+  class AuthenticationError < Error
+  end
+
+  class ApiError < Error
+    attr_reader status: Integer?
+    attr_reader body: untyped
+    def initialize: (?String?, ?status: Integer?, ?body: untyped) -> void
+  end
+
+  class Configuration
+    attr_accessor api_key: String?
+    attr_accessor api_base_url: String
+    attr_accessor timeout: Integer
+    attr_accessor user_agent: String
+  end
+
+  class Client
+    attr_reader api_key: String?
+    attr_reader api_base_url: String
+    attr_reader timeout: Integer
+    def initialize: (?api_key: String?, ?api_base_url: String?, ?timeout: Integer?) -> void
+    def configured?: () -> bool
+  end
+end
