@@ -1,44 +1,18 @@
 # frozen_string_literal: true
 
-require_relative "vehiclesdb/version"
-require_relative "vehiclesdb/error"
-require_relative "vehiclesdb/configuration"
-require_relative "vehiclesdb/client"
-
-# VehiclesDB — the official Ruby SDK for the VehiclesDB API
-# (https://vehiclesdb.com): a hosted service for rich vehicle data — production
-# years, model images (year- and color-accurate), market segments, specs, and more.
+# The `vehiclesdb` gem is a thin, official ALIAS of the `vehicles` gem — one
+# require away from the same bundled dataset, lookups, validators, and MCP
+# server. It exists so that people who discover the project through the
+# VehiclesDB name (github.com/vehiclesdb, huggingface.co/vehiclesdb,
+# vehiclesdb.com) can `gem "vehiclesdb"` and land on the real thing, and so
+# the name is defended in the vehiclesdb-<language> SDK family.
 #
-# This is the low-level API wrapper. If you just want make/model dropdowns that
-# work offline with zero setup, use the `vehicles` gem instead — it bundles the
-# data locally and reaches for VehiclesDB only for optional hosted enrichment.
-# The two are independent: `vehicles` works without this gem, and this gem works
-# without `vehicles`.
-#
-#   VehiclesDB.configure { |c| c.api_key = ENV["VEHICLESDB_API_KEY"] }
-#   VehiclesDB.client.configured?   # => true
-#
-# NOTE: the VehiclesDB API is not public yet. This release reserves the gem and
-# establishes its shape; resource methods land as the API ships.
-module VehiclesDB
-  class << self
-    def configuration
-      @configuration ||= Configuration.new
-    end
+# There is deliberately NO separate API client here: the hosted-API seam
+# lives inside `vehicles` (configure an api_key and the providers answer).
+# One codebase, two front doors.
 
-    def configure
-      yield(configuration)
-    end
+require "vehicles"
 
-    # Reset config + the memoized default client. Mainly for tests.
-    def reset_configuration!
-      @configuration = Configuration.new
-      @client = nil
-    end
-
-    # Memoized default client, built from the global configuration.
-    def client
-      @client ||= Client.new
-    end
-  end
-end
+# Both spellings resolve to the same module — pick whichever reads better:
+#   VehiclesDB.find("vw golf") == Vehicles.find("vw golf")
+VehiclesDB = Vehicles

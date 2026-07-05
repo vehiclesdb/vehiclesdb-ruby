@@ -1,0 +1,16 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The aliased gem comes from its repo at the same ref family (main).
+      - uses: actions/checkout@v4
+        with:
+          repository: vehiclesdb/vehicles
+          path: vehicles
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+      - run: ruby -Ilib -Ivehicles/lib test/alias_test.rb
