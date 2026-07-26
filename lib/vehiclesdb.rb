@@ -7,9 +7,10 @@
 # vehiclesdb.com) can `gem "vehiclesdb"` and land on the real thing, and so
 # the name is defended in the vehiclesdb-<language> SDK family.
 #
-# There is deliberately NO separate API client here: the hosted-API seam
-# lives inside `vehicles` (configure an api_key and the providers answer).
-# One codebase, two front doors.
+# There is deliberately NO separate API client here: the hosted API client
+# lives inside `vehicles` (configure an api_key and the providers answer —
+# the images endpoint is LIVE as of vehicles 0.5.0; mint a key at
+# https://vehiclesdb.com/settings/api-keys). One codebase, two front doors.
 
 require "vehicles"
 

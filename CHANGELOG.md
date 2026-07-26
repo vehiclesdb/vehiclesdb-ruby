@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.0] - 2026-07-26
+
+Track `vehicles 0.5.0`: the hosted VehiclesDB **images API is live**.
+`VehiclesDB.find("vw golf").image(color: "red")` returns rendered variant
+URLs once you configure an api_key (mint one at
+vehiclesdb.com/settings/api-keys); `#images` returns the full payload.
+No changes in this repo beyond the version — the client lives inside
+`vehicles`, exactly as designed ("one codebase, two front doors").
+
 ## [0.4.1] - 2026-07-26
 
 Jump to track `vehicles ~> 0.4` (the alias mirrors the minor it wraps —
