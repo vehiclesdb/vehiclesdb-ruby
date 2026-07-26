@@ -5,13 +5,13 @@ Gem::Specification.new do |spec|
   # Tracks the `vehicles` minor it aliases (no version.rb — the alias is two
   # files; the constant VehiclesDB is Vehicles itself, so a nested VERSION
   # would collide with the real one).
-  spec.version = "0.2.0"
+  spec.version = "0.4.1"
   spec.authors = ["rameerez"]
   spec.email   = ["rubygems@rameerez.com"]
 
   spec.summary     = "Official alias of the `vehicles` gem — the VehiclesDB open vehicle dataset for Ruby."
   spec.description = "vehiclesdb is a thin, official alias of the `vehicles` gem: the VehiclesDB open " \
-                     "dataset (18.5k vehicle models across cars, motorcycles, mopeds, vans, trucks and " \
+                     "dataset (~17k vehicle models across cars, motorcycles, mopeds, vans, trucks and " \
                      "buses, from official registers of 14 countries) with Rails-friendly lookups, " \
                      "dropdown helpers, validators, popularity/availability data, and a bundled MCP " \
                      "server. Installing this gem installs `vehicles` and exposes the same API under " \
@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.files = ["lib/vehiclesdb.rb", "README.md", "LICENSE.txt", "CHANGELOG.md"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "vehicles", "~> 0.2"
+  spec.add_dependency "vehicles", "~> 0.4"
 end
