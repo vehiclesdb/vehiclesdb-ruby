@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.1] - 2026-08-01
+
+Track `vehicles 0.6.1`: license **plates** as a first-class citizen
+(`VehiclesDB.plates`, two-tier validation), `Model#former_ids` (the
+append-only migration aliases — check them before assuming a stored id
+disappeared), and the dataset refreshed to the 2026.08.0 correction
+release. The hosted **API is live** at vehiclesdb.com/api: resolve messy
+strings server-side (`POST /v1/resolve`), fetch enriched records
+(`/full`) and rendered imagery (`/images`) with a `vdb_` key.
+No changes in this repo beyond the version — the client lives inside
+`vehicles`, exactly as designed ("one codebase, two front doors").
+
 ## [0.5.0] - 2026-07-26
 
 Track `vehicles 0.5.0`: the hosted VehiclesDB **images API is live**.

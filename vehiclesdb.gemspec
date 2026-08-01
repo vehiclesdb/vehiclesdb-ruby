@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   # Tracks the `vehicles` minor it aliases (no version.rb — the alias is two
   # files; the constant VehiclesDB is Vehicles itself, so a nested VERSION
   # would collide with the real one).
-  spec.version = "0.5.0"
+  spec.version = "0.6.1"
   spec.authors = ["rameerez"]
   spec.email   = ["rubygems@rameerez.com"]
 
@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.files = ["lib/vehiclesdb.rb", "README.md", "LICENSE.txt", "CHANGELOG.md"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "vehicles", "~> 0.5"
+  spec.add_dependency "vehicles", "~> 0.6", ">= 0.6.1"
 end
