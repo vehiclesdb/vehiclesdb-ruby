@@ -27,3 +27,11 @@ Docs, features, dataset details: **see the
 [`vehicles` README](https://github.com/vehiclesdb/vehicles#readme)**.
 
 Code MIT · bundled data CC-BY 4.0 (VehiclesDB).
+
+## Attribution
+
+The bundled dataset is **CC-BY 4.0**: visible credit with a link is a
+condition of the license. The form we request: *"Vehicle data by
+[VehiclesDB](https://vehiclesdb.com)"*. Snippets (HTML, Markdown, BibTeX,
+badge): [vehiclesdb.com/attribution](https://vehiclesdb.com/attribution).
+Prefer not to credit? [Commercial license](https://vehiclesdb.com).
