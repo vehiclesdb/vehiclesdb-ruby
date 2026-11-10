@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
 
   spec.summary     = "Official alias of the `vehicles` gem — the VehiclesDB open vehicle dataset for Ruby."
   spec.description = "vehiclesdb is a thin, official alias of the `vehicles` gem: the VehiclesDB open " \
-                     "dataset (~17k vehicle models across cars, motorcycles, mopeds, vans, trucks and " \
-                     "buses, from official registers of 14 countries) with Rails-friendly lookups, " \
+                     "dataset (every vehicle make and model across cars, motorcycles, mopeds, vans, trucks and " \
+                     "buses, from the official registers of every covered country) with Rails-friendly lookups, " \
                      "dropdown helpers, validators, popularity/availability data, and a bundled MCP " \
                      "server. Installing this gem installs `vehicles` and exposes the same API under " \
                      "the VehiclesDB constant. If in doubt, depend on `vehicles` directly."
