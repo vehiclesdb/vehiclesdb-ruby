@@ -1,5 +1,7 @@
 # `vehiclesdb` — official alias of [`vehicles`](https://github.com/vehiclesdb/vehicles)
 
+> **Get your free key, the integration guide and the credit snippet at [vehiclesdb.com](https://vehiclesdb.com/users/sign_up?for=app_saas&cta=readme_vehiclesdb_ruby)**
+
 This gem is a two-file front door: it depends on
 [**`vehicles`**](https://github.com/vehiclesdb/vehicles) — the Ruby SDK for
 the [VehiclesDB](https://github.com/vehiclesdb/vehiclesdb) open vehicle
